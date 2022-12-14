@@ -28,6 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -45,6 +48,7 @@ INSTALLED_APPS = [
     'corsheaders',
 
     'products.apps.ProductsConfig',
+    'orders.apps.OrdersConfig',
 ]
 
 CORS_ALLOWED_ORIGINS = [
